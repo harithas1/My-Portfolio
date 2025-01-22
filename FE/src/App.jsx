@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div className="flex flex-col">
       {/* Navbar Section */}
-      <header className="bg-gray-900 text-white p-6 shadow-md">
+      <header className="bg-gray-900 text-white p-6 shadow-md sticky top-0 z-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <h1 className="text-3xl font-semibold">Portfolio</h1>
 
@@ -74,7 +74,7 @@ export default function App() {
 
       {/* Mobile Menu */}
       <div
-        className={`sm:hidden bg-gray-900 text-white space-y-4 p-4 transition-all duration-300 ${
+        className={`sm:hidden bg-gray-900 text-white space-y-4 p-4 sticky top-16 z-40 transition-all duration-300 ${
           isMobileMenuOpen ? "block" : "hidden"
         }`}
       >
@@ -115,7 +115,7 @@ export default function App() {
         </a>
       </div>
 
-      {/* Main Content - Each section now has an id for navigation */}
+      {/* Main Content */}
       <main className="flex-grow">
         <section id="home">
           <Home />

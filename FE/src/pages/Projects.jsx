@@ -16,11 +16,11 @@ import {
 const renderCarousel = (filteredProjects) => (
   <div className="relative w-full max-w-screen-xl mx-auto">
     <Carousel className="w-full overflow-hidden">
-      <CarouselContent className="grid gap-x-6 grid-flow-col auto-cols-[80%] sm:auto-cols-[50%] md:auto-cols-[33.333%] lg:auto-cols-[25%] sm:items-center place-items-center">
+      <CarouselContent className="grid gap-x-4 sm:gap-x-6 grid-flow-col auto-cols-[80%] sm:auto-cols-[50%] md:auto-cols-[33.333%] lg:auto-cols-[25%] sm:items-center place-items-center">
         {filteredProjects.map((project) => (
           <CarouselItem
             key={project.id}
-            className="sm: w-[300px] md:w-[280px] lg:w-[280px] p-4 bg-black rounded-lg shadow-lg overflow-hidden h-[320px] mx-auto my-4 flex flex-col justify-between items-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl border"
+            className="w-[300px] sm:w-[280px] lg:w-[280px] mx-2 p-4 bg-black rounded-lg shadow-lg overflow-hidden h-[320px] my-4 flex flex-col justify-between items-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl border"
           >
             <div className="w-[160px] h-[160px] mx-auto bg-gray-200 flex items-center justify-center rounded-md overflow-hidden">
               <img
@@ -71,6 +71,7 @@ const renderCarousel = (filteredProjects) => (
     </Carousel>
   </div>
 );
+
 
 export default function Projects() {
   const [selectedCategory, setSelectedCategory] = useState("all");
